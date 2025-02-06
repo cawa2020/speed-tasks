@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .animation {
+        width: 140px;
+        height: 200px;
+        background-size: 100% 100%;
+        background-position: top;
+        background-repeat: no-repeat;
+        animation: move 5s linear infinite;
+      }
+
+      @keyframes move {
+        0% {
+          background-image: url("imgs/1.png");
+        }
+
+        10% {
+          background-image: url("imgs/2.png");
+        }
+
+        20% {
+          background-image: url("imgs/3.png");
+        }
+
+        30% {
+          background-image: url("imgs/1.png");
+        }
+
+        40% {
+          background-image: url("imgs/2.png");
+        }
+
+        50% {
+          background-image: url("imgs/3.png");
+        }
+
+        60% {
+          background-image: url("imgs/1.png");
+        }
+
+        70% {
+          background-image: url("imgs/2.png");
+        }
+
+        80% {
+          background-image: url("imgs/3.png");
+        }
+
+        90% {
+          background-image: url("imgs/1.png");
+        }
+
+        100% {
+          background-image: url(imgs/3.png);
+          margin-left: 50%;
+        }
+
+
+
+      }
+    </style>
+  </head>
+  <body>
+    <div class="animation"></div>
+  </body>
+</html>

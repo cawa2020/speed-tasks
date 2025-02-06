@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .side,
+      .container {
+        width: 10em;
+        height: 10em;
+      }
+
+      .container {
+        transform-style: preserve-3d;
+        animation: rotate 10s infinite linear;
+      }
+
+      .side {
+        position: absolute;
+        width: 10em;
+        height: 10em;
+        border: 2px solid black;
+        opacity: 0.9;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat(3, 1fr);
+        gap: 1px;
+      }
+
+      .cell {
+        border: 1px solid black;
+      }
+
+      .back {
+        transform: translateZ(-5em);
+        background: orange;
+      }
+
+      .left {
+        transform: translateX(-5em) rotateY(90deg);
+        background: lightgreen;
+      }
+
+      .right {
+        transform: translateX(5em) rotateY(90deg);
+        background: yellowgreen;
+      }
+      .top {
+        transform: translateY(-5em) rotateX(90deg);
+        background: skyblue;
+      }
+
+      .bottom {
+        transform: translateY(5em) rotateX(90deg);
+        background: steelblue;
+      }
+
+      .front {
+        transform: translateZ(5em);
+        background: gold;
+      }
+
+      @keyframes rotate {
+        100% {
+          transform: rotatex(360deg) rotateY(360deg) rotateZ(360deg);
+        }
+      }
+
+      HTML,
+      BODY {
+        height: 100%;
+      }
+
+      BODY {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="back side">
+        <div class="cell"></div>
+        <div class="cell"></div>
+        <div class="cell"></div>
+        <div class="cell"></div>
+        <div class="cell"></div>
+        <div class="cell"></div>
+        <div class="cell"></div>
+        <div class="cell"></div>
+        <div class="cell"></div>
+      </div>
+      <div class="left side">
+        <div class="cell"></div>
+        <div class="cell"></div>
+        <div class="cell"></div>
+        <div class="cell"></div>
+        <div class="cell"></div>
+        <div class="cell"></div>
+        <div class="cell"></div>
+        <div class="cell"></div>
+        <div class="cell"></div>
+      </div>
+      <div class="right side">
+        <div class="cell"></div>
+        <div class="cell"></div>
+        <div class="cell"></div>
+        <div class="cell"></div>
+        <div class="cell"></div>
+        <div class="cell"></div>
+        <div class="cell"></div>
+        <div class="cell"></div>
+        <div class="cell"></div>
+      </div>
+      <div class="top side">
+        <div class="cell"></div>
+        <div class="cell"></div>
+        <div class="cell"></div>
+        <div class="cell"></div>
+        <div class="cell"></div>
+        <div class="cell"></div>
+        <div class="cell"></div>
+        <div class="cell"></div>
+        <div class="cell"></div>
+      </div>
+      <div class="bottom side">
+        <div class="cell"></div>
+        <div class="cell"></div>
+        <div class="cell"></div>
+        <div class="cell"></div>
+        <div class="cell"></div>
+        <div class="cell"></div>
+        <div class="cell"></div>
+        <div class="cell"></div>
+        <div class="cell"></div>
+      </div>
+      <div class="front side">
+        <div class="cell"></div>
+        <div class="cell"></div>
+        <div class="cell"></div>
+        <div class="cell"></div>
+        <div class="cell"></div>
+        <div class="cell"></div>
+        <div class="cell"></div>
+        <div class="cell"></div>
+        <div class="cell"></div>
+      </div>
+    </div>
+  </body>
+</html>
