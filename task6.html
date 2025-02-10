@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Document</title>
+  <style>
+    input {
+        width: 200px;
+        height: 66px;
+        background-image: url("imgs/task6/sun_bg.png");
+        background-size: cover;
+        appearance: none;
+        position: relative;
+        transition: .2s;
+    }
+
+    input::after {
+        content: "";
+        width: 56px;
+        height: 56px;
+        background-image: url("imgs/task6/sun.png");
+        background-size: cover;
+        top: 5px;
+        left: 5px;
+        position: absolute;
+        transition: .2s;
+    }
+
+    input:checked::after {
+        left: calc(100% - 56px - 5px);
+        background-image: url("imgs/task6/moon.png");
+    }
+
+    input:checked {
+        background-image: url("imgs/task6/moon_bg.png");
+    }
+
+    body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 90vh;
+    }
+  </style>
+</head>
+
+<body>
+  <input type="checkbox">
+</body>
+
+</html>

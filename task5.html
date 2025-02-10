@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Document</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      text-decoration: none;
+    }
+
+    /* body {
+      display: flex;
+      flex-direction: column;
+      flex:
+    } */
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    header {
+      padding: 20px;
+      display: flex;
+      justify-content: space-between;
+      background-color: rgba(0, 0, 0, .7);
+      backdrop-filter: blur(20px);
+      position: sticky;
+      top: 0;
+      color: white;
+
+      & a {
+        color: white
+      }
+    }
+
+    nav {
+      display: flex;
+      gap: 20px;
+    }
+
+    main {
+      display: flex;
+      min-height: 100vh;
+    }
+
+    .main-content {
+      width: 100%;
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px
+    }
+
+    .card {
+      border-radius: 4px;
+
+      & img {
+        width: 100%;
+      }
+
+      & .card-info {
+        display: grid;
+        gap: 12px
+      }
+
+      & .card-info__bottom {
+        display: flex;
+        justify-content: space-between;
+        color: gray
+      }
+
+      & h3 {
+        margin-bottom: 8px;
+      }
+    }
+
+    h1 {
+      margin-bottom: 20px;
+    }
+
+    .sidebar {
+      padding: 20px;
+      width: clamp(200px, 500px, 100%);
+      box-shadow: 1px 1px 1px black;
+      background-color: rgba(0, 0, 0, .3);
+    }
+
+    footer {
+      padding: 20px;
+      background-color: rgba(0, 0, 0, .5);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 4px;
+      font-size: 20px;
+    } 
+
+    @media screen and (max-width: 992px) {
+      .main-content {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    @media screen and (max-width: 768px) {
+      .main-content {
+        grid-template-columns: repeat(1, 1fr);
+      }
+    }
+
+    @media screen and (max-width: 576px) {
+      .main-content {
+        grid-template-columns: repeat(1, 1fr);
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <span>ЛОГО</span>
+    <nav>
+      <span>+8 777 777 77 77</span>
+      <a href="#block1">Обо мне</a>
+      <a href="#main">Новости</a>
+      <a href="#footer">Контакты</a>
+    </nav>
+  </header>
+  <main id="main">
+    <div style="margin: 20px;">
+      <h1>Новости</h1>
+      <div class="main-content">
+        <div class="card">
+          <img src="imgs/img.jpg" alt="">
+          <div class="card-info">
+            <div>
+              <h3>Всем привет отлично себя чувствую</h3>
+              <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Iure odio ipsa libero ut laborum architecto,
+                nam
+                aspernatur itaque, praesentium dolor dolore veniam, laudantium dignissimos exercitationem illo. Quod, a
+                exercitationem. Delectus.</p>
+            </div>
+            <hr>
+            <div class="card-info__bottom">
+              <span>
+                5 просмотров
+              </span>
+
+              <span>
+                02.05.2000
+              </span>
+            </div>
+          </div>
+        </div>
+        <div class="card">
+          <img src="imgs/img.jpg" alt="">
+          <div class="card-info">
+            <div>
+              <h3>Всем привет отлично себя чувствую</h3>
+              <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Iure odio ipsa libero ut laborum architecto,
+                nam
+                aspernatur itaque, praesentium dolor dolore veniam, laudantium dignissimos exercitationem illo. Quod, a
+                exercitationem. Delectus.</p>
+            </div>
+            <hr>
+            <div class="card-info__bottom">
+              <span>
+                5 просмотров
+              </span>
+
+              <span>
+                02.05.2000
+              </span>
+            </div>
+          </div>
+        </div>
+        <div class="card">
+          <img src="imgs/img.jpg" alt="">
+          <div class="card-info">
+            <div>
+              <h3>Всем привет отлично себя чувствую</h3>
+              <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Iure odio ipsa libero ut laborum architecto,
+                nam
+                aspernatur itaque, praesentium dolor dolore veniam, laudantium dignissimos exercitationem illo. Quod, a
+                exercitationem. Delectus.</p>
+            </div>
+            <hr>
+            <div class="card-info__bottom">
+              <span>
+                5 просмотров
+              </span>
+
+              <span>
+                02.05.2000
+              </span>
+            </div>
+          </div>
+        </div>
+        <div class="card">
+          <img src="imgs/img.jpg" alt="">
+          <div class="card-info">
+            <div>
+              <h3>Всем привет отлично себя чувствую</h3>
+              <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Iure odio ipsa libero ut laborum architecto,
+                nam
+                aspernatur itaque, praesentium dolor dolore veniam, laudantium dignissimos exercitationem illo. Quod, a
+                exercitationem. Delectus.</p>
+            </div>
+            <hr>
+            <div class="card-info__bottom">
+              <span>
+                5 просмотров
+              </span>
+
+              <span>
+                02.05.2000
+              </span>
+            </div>
+          </div>
+        </div>
+        <div class="card">
+          <img src="imgs/img.jpg" alt="">
+          <div class="card-info">
+            <div>
+              <h3>Всем привет отлично себя чувствую</h3>
+              <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Iure odio ipsa libero ut laborum architecto,
+                nam
+                aspernatur itaque, praesentium dolor dolore veniam, laudantium dignissimos exercitationem illo. Quod, a
+                exercitationem. Delectus.</p>
+            </div>
+            <hr>
+            <div class="card-info__bottom">
+              <span>
+                5 просмотров
+              </span>
+
+              <span>
+                02.05.2000
+              </span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="sidebar">
+      это сайдбар
+    </div>
+  </main>
+  <footer id="footer">
+    <h4>
+      Контакты для связи
+    </h4>
+    <span>+8 777 777 77 77</span>
+    <span>gmail@gmail.com</span>
+    <span>tg - jijzoci</span>
+  </footer>
+</body>
+
+</html>

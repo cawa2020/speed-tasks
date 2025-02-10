@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Часы</title>
+  <style>
+    body {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+      background-color: #f0f0f0;
+    }
+
+    .clock {
+      position: relative;
+      width: 300px;
+      height: 300px;
+      background: url("imgs/clock.jpg") no-repeat center center;
+      background-size: cover;
+
+      &::after {
+        content: "";
+        position: absolute;
+
+        width: 12px;
+        height: 12px;
+        background-color: black;
+        border-radius: 9999px;
+        left: calc(50% - 4px);
+        top: calc(50% - 6px);
+        transform-origin: 50% 50%;
+      }
+    }
+
+    .hand {
+      position: absolute;
+      left: 50%;
+      bottom: 50%;
+      transform-origin: 50% 100%;
+      background-color: black;
+      border-radius: 9999px;
+    }
+
+    .hour {
+      width: 6px;
+      height: 70px;
+    }
+
+    .minute {
+      width: 4px;
+      height: 100px;
+    }
+
+    .second {
+      width: 2px;
+      height: 120px;
+      background-color: red;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="clock">
+    <div class="hand hour" id="hour-hand"></div>
+    <div class="hand minute" id="minute-hand"></div>
+    <div class="hand second" id="second-hand"></div>
+  </div>
+
+  <script>
+    let isFirst = true
+    function updateClock() {
+      const now = new Date();
+      const seconds = now.getSeconds();
+      const minutes = now.getMinutes();
+      const hours = now.getHours() % 12;
+
+      const secondHand = document.getElementById('second-hand');
+      const minuteHand = document.getElementById('minute-hand');
+      const hourHand = document.getElementById('hour-hand');
+
+      secondHand.style.transform = `rotate(${seconds * 6}deg)`;
+
+      if (seconds == 0 || isFirst) {
+        minuteHand.style.transform = `rotate(${minutes * 6 + seconds * 0.1}deg)`;
+      }
+
+      if (minutes == 0 || isFirst) {
+        hourHand.style.transform = `rotate(${hours * 30 + minutes * 0.5}deg)`;
+      }
+      isFirst = false
+    }
+
+    setInterval(updateClock, 1000);
+    updateClock(); // Инициализация при загрузке
+  </script>
+</body>
+
+</html>
